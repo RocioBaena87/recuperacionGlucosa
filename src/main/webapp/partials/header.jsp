@@ -22,7 +22,6 @@
 -->
 
 <fmt:setLocale value="${sessionScope.locale}"/>
-<fmt:setBundle basename="messages"/>
 
 <head>
    <!-- Título dinámico según idioma -->
@@ -39,12 +38,13 @@
       <li><a href="/index.jsp"><fmt:message key="msg.title"/></a></li>
 
       <!-- Enlaces a rutas de Servlets -->
-      <li><a href="/registros">Registros de Glucosa</a></li>
-            <li><a href="/clasificaciones">Clasificación de Rangos</a></li>
-            <li><a href="/users">Gestión de Usuarios</a></li>
+      <li><a href="/registros"><fmt:message key="msg.registro-list.title"/></a></li>
+            <li><a href="/clasificaciones"><fmt:message key="msg.clasificacion-list.title"/></a></li>
+            <li><a href="/users"><fmt:message key="msg.user-list.title"/></a></li>
 
       <!-- Selector de idioma para internacionalización -->
       <li>
+         <fmt:setBundle basename="messages"/>
          <form action="changeLanguage" method="get">
             <select name="lang" onchange="this.form.submit()">
                <option value="en" ${sessionScope.locale.language == 'en' ? 'selected' : ''}>English</option>
