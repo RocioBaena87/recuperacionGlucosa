@@ -1,4 +1,4 @@
-package servlets;
+package org.iesalixar.daw2.rbp.servlets;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
